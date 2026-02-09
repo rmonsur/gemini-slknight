@@ -3,7 +3,7 @@
 > Your AI-powered quest to defeat student debt.
 > Built with Gemini 3 as Game Master — not a chatbot, an orchestrator.
 
-**Live Demo:** https://slknight-832393492445.us-central1.run.app
+**Live Demo:** https://slknight.xyz/
 
 ---
 
