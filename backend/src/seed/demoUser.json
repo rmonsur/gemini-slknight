@@ -1,0 +1,220 @@
+{
+    "userId": "demo_jane_doe_001",
+    "lifecycleStage": "STAGE_1_SIMULATOR",
+    "isDemo": true,
+    "profile": {
+        "status": "IN_SCHOOL",
+        "major": "Computer Science",
+        "school": "NYU",
+        "gradDate": "2026-05-15",
+        "targetCity": "Brooklyn, NY",
+        "mobile": "+15551234567",
+        "email": "jane@example.com",
+        "job": {
+            "title": "Software Engineer",
+            "employerType": "PRIVATE",
+            "income": 75000
+        },
+        "familySize": 1,
+        "willingnessToRelocate": true
+    },
+    "financials": {
+        "totalDebt": 55000,
+        "servicer": "Nelnet",
+        "loans": [
+            {
+                "id": "loan_1",
+                "balance": 25000,
+                "rate": 0.045,
+                "type": "SUBSIDIZED",
+                "source": "MANUAL"
+            },
+            {
+                "id": "loan_2",
+                "balance": 18000,
+                "rate": 0.068,
+                "type": "UNSUBSIDIZED",
+                "source": "MANUAL"
+            },
+            {
+                "id": "loan_3",
+                "balance": 12000,
+                "rate": 0.072,
+                "type": "PRIVATE",
+                "source": "MANUAL"
+            }
+        ]
+    },
+    "preferences": {
+        "lifestylePreference": "BALANCED",
+        "riskTolerance": "MEDIUM",
+        "careerAmbition": "Lead a tech team at a startup"
+    },
+    "generativeState": {
+        "currentTheme": "NEUTRAL",
+        "mapRegionInterest": [
+            "MIDWEST",
+            "REMOTE_ONLY"
+        ],
+        "enable3D": true,
+        "lastAgentOutput": {},
+        "dataIntegrityScore": 0
+    },
+    "notifications": [
+        {
+            "id": "notif_welcome",
+            "type": "SYSTEM",
+            "title": "Welcome to SLKnight",
+            "body": "Your AI-powered financial companion is ready to help.",
+            "read": false,
+            "createdAt": "2026-02-07T00:00:00Z"
+        }
+    ],
+    "preComputedScenarios": {
+        "statusQuo": {
+            "id": "status_quo",
+            "label": "Current Path",
+            "narrative": "By 2036, you'll have paid off your student loans after 10 years of standard payments. You'll pay $450/month and spend $28,000 in interest. Your quality of life during this period will be modest but stable.",
+            "debtFreeDate": "2036-03-15",
+            "monthlyPayment": 450,
+            "totalInterestPaid": 28000,
+            "qualityOfLifeScore": 42,
+            "chartData": {
+                "labels": [
+                    "2026",
+                    "2028",
+                    "2030",
+                    "2032",
+                    "2034",
+                    "2036"
+                ],
+                "balances": [
+                    55000,
+                    48000,
+                    38000,
+                    26000,
+                    12000,
+                    0
+                ]
+            }
+        },
+        "tulsaRelocation": {
+            "id": "tulsa_relocation",
+            "label": "Move to Tulsa (+$10k grant)",
+            "narrative": "Relocating to Tulsa gets you a $10,000 remote worker grant. Combined with lower cost of living, your debt-free date shifts to 2030. You save $10,000 in interest and boost your quality of life score significantly.",
+            "debtFreeDate": "2030-08-01",
+            "monthlyPayment": 450,
+            "totalInterestPaid": 18000,
+            "qualityOfLifeScore": 71,
+            "chartData": {
+                "labels": [
+                    "2026",
+                    "2027",
+                    "2028",
+                    "2029",
+                    "2030"
+                ],
+                "balances": [
+                    45000,
+                    35000,
+                    24000,
+                    12000,
+                    0
+                ]
+            }
+        },
+        "aggressivePayment": {
+            "id": "aggressive_payment",
+            "label": "Aggressive (+$200/month)",
+            "narrative": "Increasing your payment by $200/month to $650 total accelerates your payoff to 2031. You'll pay $22,000 in interest—saving $6,000 compared to the standard plan. Tighter budget, but faster freedom.",
+            "debtFreeDate": "2031-06-01",
+            "monthlyPayment": 650,
+            "totalInterestPaid": 22000,
+            "qualityOfLifeScore": 55,
+            "chartData": {
+                "labels": [
+                    "2026",
+                    "2028",
+                    "2030",
+                    "2031"
+                ],
+                "balances": [
+                    55000,
+                    38000,
+                    15000,
+                    0
+                ]
+            }
+        }
+    },
+    "preComputedOffers": [
+        {
+            "id": "offer_tulsa",
+            "type": "RELOCATION_GRANT",
+            "title": "Tulsa Remote Worker Grant",
+            "value": 10000,
+            "source": "Tulsa Remote",
+            "coordinates": [
+                -95.99,
+                36.15
+            ],
+            "eligibility": "Remote workers, 18+, relocate within 6 months"
+        },
+        {
+            "id": "offer_topeka",
+            "type": "RELOCATION_GRANT",
+            "title": "Choose Topeka Incentive",
+            "value": 15000,
+            "source": "Greater Topeka Partnership",
+            "coordinates": [
+                -95.68,
+                39.04
+            ],
+            "eligibility": "Full-time remote workers, must rent or buy home"
+        },
+        {
+            "id": "offer_pslf",
+            "type": "FORGIVENESS",
+            "title": "Public Service Loan Forgiveness",
+            "value": 55000,
+            "source": "Federal Student Aid",
+            "eligibility": "Work for government/nonprofit for 10 years, 120 qualifying payments"
+        }
+    ],
+    "preScannedDocuments": [
+        {
+            "documentId": "doc_nelnet_1",
+            "uploadedAt": "2026-02-01T10:30:00Z",
+            "imageUrl": "/demo/nelnet_statement.jpg",
+            "extractionStatus": "COMPLETE",
+            "extractedData": {
+                "servicerName": "Nelnet",
+                "accountNumberLast4": "4567",
+                "interestRate": 0.045,
+                "principalBalance": 25000,
+                "monthlyPayment": 280,
+                "dueDate": "2026-03-01",
+                "loanType": "SUBSIDIZED"
+            },
+            "confidence": 0.94
+        },
+        {
+            "documentId": "doc_navient_1",
+            "uploadedAt": "2026-02-02T14:15:00Z",
+            "imageUrl": "/demo/navient_statement.jpg",
+            "extractionStatus": "COMPLETE",
+            "extractedData": {
+                "servicerName": "Navient",
+                "accountNumberLast4": "8901",
+                "interestRate": 0.068,
+                "principalBalance": 18000,
+                "monthlyPayment": 170,
+                "dueDate": "2026-03-15",
+                "loanType": "UNSUBSIDIZED"
+            },
+            "confidence": 0.91
+        }
+    ],
+    "createdAt": "2026-01-01T00:00:00Z",
+    "updatedAt": "2026-02-07T00:00:00Z"
+}

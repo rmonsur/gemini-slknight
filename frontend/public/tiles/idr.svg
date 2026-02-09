@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="idrGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#319795;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#285e61;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#81e6d9;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#38b2ac;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  <!-- Base platform -->
+  <polygon points="100,50 170,85 100,120 30,85" fill="url(#idrGrad)" stroke="#4fd1c5" stroke-width="1"/>
+  <polygon points="30,85 100,120 100,145 30,110" fill="#285e61" stroke="#4fd1c5" stroke-width="1"/>
+  <polygon points="170,85 100,120 100,145 170,110" fill="#234e52" stroke="#4fd1c5" stroke-width="1"/>
+  <!-- Temple pillars -->
+  <rect x="55" y="55" width="8" height="35" fill="#e2e8f0"/>
+  <rect x="85" y="45" width="10" height="45" fill="#e2e8f0"/>
+  <rect x="105" y="45" width="10" height="45" fill="#e2e8f0"/>
+  <rect x="137" y="55" width="8" height="35" fill="#e2e8f0"/>
+  <!-- Temple roof -->
+  <polygon points="100,30 145,55 100,70 55,55" fill="#cbd5e0"/>
+  <!-- Water cascade -->
+  <path d="M85,90 Q90,100 85,110 Q80,120 85,130" stroke="url(#waterGrad)" stroke-width="3" fill="none"/>
+  <path d="M100,95 Q105,105 100,115 Q95,125 100,135" stroke="url(#waterGrad)" stroke-width="4" fill="none"/>
+  <path d="M115,90 Q110,100 115,110 Q120,120 115,130" stroke="url(#waterGrad)" stroke-width="3" fill="none"/>
+</svg>

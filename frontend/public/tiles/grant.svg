@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="grantGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48bb78;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#276749;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Base platform -->
+  <polygon points="100,55 165,88 100,120 35,88" fill="url(#grantGrad)" stroke="#9ae6b4" stroke-width="1"/>
+  <polygon points="35,88 100,120 100,145 35,113" fill="#276749" stroke="#9ae6b4" stroke-width="1"/>
+  <polygon points="165,88 100,120 100,145 165,113" fill="#22543d" stroke="#9ae6b4" stroke-width="1"/>
+  <!-- Trees -->
+  <ellipse cx="65" cy="55" rx="15" ry="20" fill="#68d391"/>
+  <rect x="62" y="70" width="6" height="15" fill="#744210"/>
+  <ellipse cx="100" cy="45" rx="18" ry="25" fill="#48bb78"/>
+  <rect x="97" y="65" width="6" height="18" fill="#744210"/>
+  <ellipse cx="135" cy="55" rx="15" ry="20" fill="#68d391"/>
+  <rect x="132" y="70" width="6" height="15" fill="#744210"/>
+  <!-- Golden fruits -->
+  <circle cx="55" cy="50" r="5" fill="#ecc94b"/>
+  <circle cx="75" cy="48" r="4" fill="#f6e05e"/>
+  <circle cx="90" cy="40" r="5" fill="#ecc94b"/>
+  <circle cx="110" cy="42" r="4" fill="#f6e05e"/>
+  <circle cx="125" cy="50" r="5" fill="#ecc94b"/>
+  <circle cx="145" cy="52" r="4" fill="#f6e05e"/>
+  <!-- Sunlight rays -->
+  <line x1="100" y1="10" x2="100" y2="25" stroke="#faf089" stroke-width="2" opacity="0.6"/>
+  <line x1="80" y1="15" x2="85" y2="28" stroke="#faf089" stroke-width="2" opacity="0.5"/>
+  <line x1="120" y1="15" x2="115" y2="28" stroke="#faf089" stroke-width="2" opacity="0.5"/>
+</svg>

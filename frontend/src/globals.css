@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   SLKnight — Generative UI CSS Variables
+   These are the defaults. Gemini will override
+   them dynamically based on user's financial state.
+   ============================================ */
+
+@layer base {
+  :root {
+    /* Default: Neutral Indigo Theme */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    
+    --radius: 0.75rem;
+    
+    /* Typography - Generative UI will override */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Optimistic Theme (Green - Low debt, on track) */
+  .theme-optimistic {
+    --background: 160 84% 4%;
+    --foreground: 160 40% 98%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 160 47% 11%;
+    --accent: 160 32% 17%;
+    --ring: 160 76% 48%;
+  }
+
+  /* Crisis Theme (Red - High debt stress) */
+  .theme-crisis {
+    --background: 0 84% 4%;
+    --foreground: 0 40% 98%;
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 47% 11%;
+    --accent: 0 32% 17%;
+    --ring: 0 76% 48%;
+  }
+
+  /* Cyberpunk Theme (Purple - Optimizer stage) */
+  .theme-cyberpunk {
+    --background: 270 84% 4%;
+    --foreground: 270 40% 98%;
+    --primary: 270 91% 65%;
+    --primary-foreground: 270 47% 11%;
+    --accent: 270 32% 17%;
+    --ring: 270 76% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* ============================================
+   Custom Animations
+   ============================================ */
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+  
+  .animate-in {
+    animation: animateIn 0.5s ease-out forwards;
+  }
+  
+  @keyframes animateIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ============================================
+   Figma Card Styles — Multi-Layered Drop Shadows
+   Creates a premium, sophisticated card appearance
+   ============================================ */
+
+.card-figma {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow:
+    /* Border-like shadow */
+    0 0 0 1px #E5E5E5,
+    /* Layer 1: Subtle close shadow */
+    0 2.8px 2.2px 0 rgba(0, 0, 0, 0.035),
+    /* Layer 2: Medium distance */
+    0 6.7px 5.3px 0 rgba(0, 0, 0, 0.047),
+    /* Layer 3: Further distance */
+    0 12.5px 10px 0 rgba(0, 0, 0, 0.06),
+    /* Layer 4: Diffuse ambient */
+    0 22.3px 17.9px 0 rgba(0, 0, 0, 0.072),
+    /* Layer 5: Large diffuse */
+    0 41.8px 33.4px 0 rgba(0, 0, 0, 0.086),
+    /* Layer 6: Outer ambient */
+    0 100px 80px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-figma:hover {
+  box-shadow:
+    0 0 0 1px #D4D4D4,
+    0 2.8px 2.2px 0 rgba(0, 0, 0, 0.04),
+    0 6.7px 5.3px 0 rgba(0, 0, 0, 0.055),
+    0 12.5px 10px 0 rgba(0, 0, 0, 0.07),
+    0 22.3px 17.9px 0 rgba(0, 0, 0, 0.085),
+    0 41.8px 33.4px 0 rgba(0, 0, 0, 0.1),
+    0 100px 80px 0 rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
+}
+
+/* Lighter variant for smaller cards */
+.card-figma-sm {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 1px #E5E5E5,
+    0 2.8px 2.2px 0 rgba(0, 0, 0, 0.028),
+    0 6.7px 5.3px 0 rgba(0, 0, 0, 0.04),
+    0 12.5px 10px 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-figma-sm:hover {
+  box-shadow:
+    0 0 0 1px #D4D4D4,
+    0 2.8px 2.2px 0 rgba(0, 0, 0, 0.035),
+    0 6.7px 5.3px 0 rgba(0, 0, 0, 0.05),
+    0 12.5px 10px 0 rgba(0, 0, 0, 0.065);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   Scrollbar Styling (Dark Theme)
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}

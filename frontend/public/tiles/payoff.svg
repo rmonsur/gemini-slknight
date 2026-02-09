@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="payoffGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#718096;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a5568;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbd38d;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#ed8936;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  <!-- Dawn sky background -->
+  <rect x="0" y="0" width="200" height="80" fill="url(#skyGrad)" opacity="0.5"/>
+  <!-- Mountain -->
+  <polygon points="100,20 160,110 40,110" fill="url(#payoffGrad)" stroke="#a0aec0" stroke-width="1"/>
+  <!-- Snow cap -->
+  <polygon points="100,20 120,45 80,45" fill="#fff" opacity="0.9"/>
+  <!-- Climbing path -->
+  <path d="M55,100 Q65,90 60,75 Q70,65 65,55 Q80,45 75,35 Q90,30 100,20" 
+        stroke="#ecc94b" stroke-width="3" stroke-dasharray="5,5" fill="none"/>
+  <!-- Base platform -->
+  <polygon points="100,90 160,110 100,130 40,110" fill="#4a5568" stroke="#718096" stroke-width="1"/>
+  <polygon points="40,110 100,130 100,150 40,130" fill="#2d3748"/>
+  <polygon points="160,110 100,130 100,150 160,130" fill="#1a202c"/>
+  <!-- Flag at top -->
+  <line x1="100" y1="20" x2="100" y2="8" stroke="#744210" stroke-width="2"/>
+  <polygon points="100,8 115,12 100,16" fill="#e53e3e"/>
+</svg>
